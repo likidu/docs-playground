@@ -1,0 +1,83 @@
+@define-mixin content {
+  @mixin block;
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    color: $text;
+    font-weight: 300;
+    line-height: 1.125;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+  & h1,
+  & h2,
+  & h3 {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+  }
+  & h1 {
+    font-size: 2em;
+    margin-top: 1.25em;
+  }
+  & h2 {
+    font-size: 1.75em;
+  }
+  & h3 {
+    font-size: 1.5em;
+  }
+  & h4 {
+    font-size: 1.25em;
+  }
+  & h5 {
+    font-size: 1.125em;
+  }
+  & h6 {
+    color: $text-strong;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+  }
+  & p{
+    line-height: 1.55;
+    word-wrap: break-word;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+  & img {
+    max-width: 100%;
+    height: auto;
+    border: none;
+  }
+  & li {
+    line-height: 1.62;
+  }
+  & li + li {
+    margin-top: 0.85em;
+  }
+  & ol {
+    list-style: decimal outside;
+    margin: 1em;
+    padding: 0;
+  }
+  & ul {
+    list-style: disc outside;
+    margin: 1em;
+    padding: 0;
+    /*& ul {
+      list-style-type: circle;
+      margin-top: 0.5em;
+      & ul {
+        list-style-type: square;
+      }
+    }*/
+  }
+}
+
+/* TODO: blockquote */

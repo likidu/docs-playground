@@ -1,0 +1,120 @@
+/* HTML Tags */
+html {
+  font-size: $size-normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $primary-font;
+}
+
+code,
+kbd,
+pre,
+samp {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: $mono-font;
+  line-height: 1.25;
+}
+
+body {
+  background: $body-background;
+  color: $text;
+  font-size: 1rem;
+  line-height: 1.428571428571429;
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  text-decoration: none;
+  transition: none $speed $easing;
+  &:hover {
+    color: $link-hover;
+  }
+  &:active {
+    color: $link-active;
+  }
+  $:visited {
+    color: $link-visited;
+  }
+}
+
+strong {
+  color: $text-strong;
+}
+
+small {
+  font-size: $size-small;
+}
+
+code {
+  background-color: $code-background;
+  border: solid 1px $border;
+  border-radius: $radius;
+  /*color: $code;*/
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 1px 2px 2px;
+}
+
+pre {
+  background-color: $pre-background;
+  color: $pre;
+  /* CSS 2 */
+  white-space: pre;
+  /* CSS 2.1*/
+  white-space: pre-wrap;
+  /* CSS 3 and 2.1 as well */
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+
+  & code {
+    background-color: $pre-background;
+    border: none;
+    color: $pre;
+    display: block;
+    line-height: 1.475;
+    overflow-x: auto;
+    padding: 12px 16px !important;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"], {
+  vertical-align: baseline;
+}
+
+/* Generic Extends */
+@define-mixin block {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  position: relative;
+
+  & {
+    @mixin desktop {
+      margin-left: 20px;
+      margin-right: @margin-left;
+      min-width: none;
+
+      &.is-narrow {
+        margin: 0 auto;
+        /*max-width: 960px;*/
+        max-width: 740px;
+      }
+    }
+  }
+}

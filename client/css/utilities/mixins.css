@@ -1,0 +1,113 @@
+/* Responsive */
+@define-mixin mobile {
+  @media screen and (width < $tablet) {
+    @mixin-content;
+  }
+}
+
+@define-mixin tablet {
+  @media screen and (width >= $tablet) {
+    @mixin-content;
+  }
+}
+
+@define-mixin touch {
+  @media screen and (width < $desktop) {
+    @mixin-content;
+  }
+}
+
+@define-mixin desktop {
+  @media screen and (width >= $desktop) {
+    @mixin-content;
+  }
+}
+
+@define-mixin widescreen {
+  @media screen and (width >= $widescreen) {
+    @mixin-content;
+  }
+}
+
+/* Draw arrow, don't use it directly. Use with overriding directions */
+@define-mixin arrow {
+  border: 1px solid $border;
+  border-right: 0;
+  border-top: 0;
+  content: ' ';
+  display: block;
+  height: 7px;
+  pointer-events: none;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 7px;
+}
+
+/* Define arrow directions */
+@define-mixin arrow-up $color {
+  @mixin arrow;
+  border-color: $color;
+  transform: rotate(135deg);
+}
+
+@define-mixin arrow-right $color {
+  @mixin arrow;
+  border-color: $color;
+  transform: rotate(-135deg);
+}
+
+@define-mixin arrow-down $color {
+  @mixin arrow;
+  border-color: $color;
+  transform: rotate(-45deg);
+}
+
+@define-mixin arrow-left $color {
+  @mixin arrow;
+  border-color: $color;
+  transform: rotate(45deg);
+}
+
+/* Draw back slash */
+@define-mixin back-slash $color: $border {
+  border-left: 1px solid $color;
+  content: ' ';
+  display: block;
+  height: 12px;
+  pointer-events: none;
+  position: absolute;
+  transform: rotate(-30deg);
+  width: 1px;
+}
+
+/* Draw dot */
+@define-mixin dot {
+  &:after {
+    color: $border;
+    content: '•';
+  }
+}
+
+/* A better clearfix method */
+@define-mixin clearfix {
+  &:after {
+    clear: both;
+    content: ' ';
+    display: table;
+  }
+}
+
+@define-mixin unselectable {
+  /* This is to prevent control be selected in iOS Safari */
+  -webkit-touch-callout: none;
+  /* General disable of selection for controls */
+  user-select: none;
+}
+
+@define-mixin overlay $offset {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
+}

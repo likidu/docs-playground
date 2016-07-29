@@ -1,0 +1,82 @@
+/* A multi-purpose horizontal level, which can contain almost any other element */
+/* Element */
+.level-item {
+  & .title,
+  & .subtitle {
+    margin-bottom: 0;
+  }
+
+  & .heading {
+    @mixin heading;
+  }
+
+  & img {
+    width: 24px;
+  }
+}
+
+/* Container */
+.level-left,
+.level-right {
+  & .level-item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    /* Modifiers */
+    &.is-flexible {
+      flex: 1;
+    }
+  }
+}
+
+.level-left {
+  /* Responsiveness */
+  & {
+    @mixin mobile {
+      & + .level-right {
+        margin-top: 20px;
+      }
+    }
+    @mixin tablet {
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
+.level-right {
+  /* Responsiveness */
+  & {
+    @mixin tablet {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+/* Wrapper */
+.level {
+  @mixin block;
+  @mixin clearfix;
+  align-items: center;
+  justify-content: space-between;
+
+  & img {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  /* Responsiveness */
+  & {
+    @mixin tablet {
+      display: flex;
+      /*& > .level-item {
+        &:not(.is-narrow) {
+          flex: 1;
+        }
+      }*/
+    }
+  }
+}

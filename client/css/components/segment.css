@@ -1,0 +1,85 @@
+/* Segment is a divided list of items, but not complex enough to use table */
+.member-details,
+.segment {
+  @mixin block;
+
+  background-color: $background;
+  border: solid 1px $border;
+}
+
+/* TODO: Deprecate member-details */
+.member-details {
+  /* To override the default ul style inherited from ul */
+  list-style: none !important;
+  margin: 0 !important;
+
+  & li + li {
+    margin-top: 0 !important;
+  }
+
+  & > li {
+    margin-top: 0;
+    padding: 8px;
+    &:not(:last-child) {
+      border-bottom: solid 1px $border;
+    }
+  }
+
+  & ol.meta {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 0.7em 0;
+
+    & li {
+      margin-top: 0;
+
+      /* This is hacky, should wrap the property value with strong tag */
+      &:last-child {
+        & code {
+          font-weight: 300;
+        }
+      }
+
+      &:first-child,
+      &:only-child {
+        & code {
+          font-weight: 600;
+        }
+      }
+    }
+
+    & code {
+      background-color: transparent;
+      border: none;
+    }
+  }
+
+  & .description {
+    clear: right;
+
+    & p {
+      margin: 0.3em 0;
+    }
+  }
+
+  & .child-toggle {
+    position: relative;
+    margin: 0.6em 0 0.4em;
+    padding-left: 4px;
+    padding-right: 14px;
+
+    &:after {
+      @mixin arrow-down $link;
+      margin-top: -4px;
+      right: 0px;
+      top: 50%;
+    }
+    &:hover {
+      &:after {
+        border-color: $link-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+$control-height: 32px;
+
+.navbar-item {
+  display: inline-block;
+
+  & .title,
+  & .subtitle {
+    margin-bottom: 0;
+  }
+
+  & {
+    @mixin mobile {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  /* Reset the p margin */
+  & > p {
+    margin: 0;
+  }
+}
+
+.navbar {
+  @mixin block;
+
+  &.is-dotted {
+    & .navbar-item {
+      &:not(:last-child) {
+        @mixin dot;
+        /* Make dot 10px margin to its text */
+        &:after {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* To enable using ul>li within navbar */
+ul.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  & > li {
+    list-style: none;
+  }
+}
+
+.navbar-left,
+.navbar-right {
+  & .navbar-item {
+    &.is-flexible {
+      flex: 1;
+    }
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.navbar-left {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+
+  & {
+    @mixin mobile {
+      & + .navbar-right {
+        margin-top: 20px;
+      }
+    }
+
+    @mixin tablet {
+      height: $control-height;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.navbar-right {
+  & {
+    @mixin tablet {
+      align-items: center;
+      display: inline-flex;
+      justify-content: flex-end;
+    }
+  }
+}

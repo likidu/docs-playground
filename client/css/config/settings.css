@@ -1,0 +1,65 @@
+/* Color Table */
+$primary: $blue;
+$primary-invert: $mid-blue; /* TODO: Could use postcss-color-func to invert the color */
+
+$callout: $grey-darker;
+/*$callout-invert: invert($callout);*/
+$note: $blue;
+$important: $yellow;
+$error: $red;
+
+$body-background: $grey-lightest;
+$background: $grey-lighter;
+
+$background-invert: $grey-darker; /* TODO: Could use postcss-color-func to invert the color */
+
+$border: $grey-light;
+$border-hover: $grey;
+$border-visited: $grey-lighter;
+
+/* Text */
+$text: $grey-darker;
+
+$text-invert: $grey-lightest; /* TODO: Could use postcss-color-func to invert the color */
+$text-light: $grey;
+$text-strong: $grey-dark;
+
+/* Code */
+$code: $red;
+$code-background: $background;
+
+$pre: $text-invert;
+$pre-background: $background-invert;
+
+/* Links */
+$link: $primary;
+$link-invert: $primary-invert;
+$link-hover: $azure-blue;
+$link-active: $azure-blue;
+$link-visited: $azure-blue;
+
+/* Controls */
+$control: $text-strong;
+$control-background: $text-invert;
+$control-border: $border;
+
+$control-hover: $link-hover;
+$control-hover-border: $border-hover;
+
+$control-active: $link;
+$control-active-background: $link;
+$control-active-background-invert: $link-invert;
+$control-active-border: $link;
+
+/* Typography */
+$primary-font: $font-family-sans-serif;
+$mono-font:    $font-family-monospace;
+$icon-font:    $font-family-icons;
+
+$size-small:  $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large:  $size-3;
+$size-huge:   $size-1;
+
+$sizes: ($size-1 $size-2 $size-3 $size-4 $size-5 $size-6);

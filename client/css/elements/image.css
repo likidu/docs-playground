@@ -1,0 +1,46 @@
+$dimensions: 16, 24, 32, 48, 64, 96, 128;
+
+.image {
+  display: block;
+  position: relative;
+
+  & img {
+    display: block;
+  }
+
+  &.is-square,
+  &.is-1by1,
+  &.is-3by2,
+  &.is-4by3,
+  &.is-16by9,
+  &.is-2by1 {
+    & img {
+      @mixin overlay 0;
+      height: 100%;
+      width: @height;
+    }
+  }
+  &.is-square,
+  &.is-1by1 {
+    padding-top: 100%;
+  }
+  &.is-4by3 {
+    padding-top: 75%;
+  }
+  &.is-16by9 {
+    padding-top: 56.25%;
+  }
+  &.is-3by2 {
+    padding-top: 66.6666%;
+  }
+  &.is-2by1 {
+    padding-top: 50%;
+  }
+
+  @each $dimenstion in $dimensions {
+    &.is-$(dimension)x$(dimension) {
+      height: calc($dimension * 1px);
+      width: @height;
+    }
+  }
+}

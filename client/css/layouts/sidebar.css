@@ -1,0 +1,63 @@
+/* Elements */
+/* TODO: To be used for static sidebar group headers */
+.sidebar-nav-header {
+
+}
+
+.sidebar-nav-item {
+  color: $text;
+  display: block;
+  padding: 6px 0;
+
+  &.is-selected {
+    color: $link;
+  }
+}
+
+/* Lists */
+.sidebar-nav-items {
+  @for $i from 0 to 4 {
+    &.is-level-$i {
+      /* Style for level 0 */
+      @if $i == 0 {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        /* Bold and enlarge it */
+        & > li > .sidebar-nav-item {
+          font-weight: 600;
+        }
+      }
+
+      @if $i == 1 {
+        padding-left: 12px;
+      }
+
+      /* Add identation and border for level 2 and above */
+      @if $i > 1 {
+        border-left: calc(3px - $i + 1) solid $border;
+        margin: 6px 3px 6px;
+        padding-left: calc(15px - $i * 2);
+      }
+    }
+  }
+}
+
+/* Container, usually on Nav tag */
+.sidebar-nav {
+  padding: 0 20px;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Wrapper */
+.sidebar {
+  /* ~16px */
+  font-size: 1.142857em;
+  overflow-y: scroll;
+}

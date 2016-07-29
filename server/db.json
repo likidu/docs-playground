@@ -1,0 +1,7 @@
+/* A mockup json server */
+{
+  "feedback": {
+    "likes": 345,
+    "dislikes": 23
+  }
+}

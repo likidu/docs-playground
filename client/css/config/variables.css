@@ -1,0 +1,60 @@
+/* Color Table */
+/* From C+E brand guideline */
+$rich-black:    #000;
+$grey-darker:   #222324;
+$grey-dark:     #69707a;
+$grey:          #aeb1b5;
+$grey-light:    #d3d6db;
+$grey-lighter:  #f5f7fa;
+$grey-lightest: #fafcfe;
+$white:         #fff;
+
+$blue:          #00a4f3;
+$azure-blue:    #0078d7;
+$mid-blue:      #00188f;
+$dark-blue:     #002050;
+$yellow:        #e8b811;
+$orange:        #d83b01;
+$red:           #e81123;
+$teal:          #008272;
+$purple:        #5c2d91;
+
+
+/* Typography */
+$font-family-sans-serif: "Segoe UI", "Segeo WP", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-monospace: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono","DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+
+$size-1: 48px;
+$size-2: 40px;
+$size-3: 28px;
+$size-4: 24px;
+$size-5: 18px;
+$size-6: 14px;
+$size-7: 11px;
+
+$weight-normal: 400 !default;
+$weight-bold: 700 !default;
+$weight-title-normal: 300 !default;
+$weight-title-bold: 500 !default;
+
+
+/* Font Icons */
+$font-family-icons: "icons";
+
+/* Breakpoints */
+$tablet: 769px;
+$desktop: 980px;
+$widescreen: 1180px;
+
+/* Sizes */
+$header-height: 50px;
+$footer-height: 50px;
+
+$dropdown-background: $grey-lightest;
+$dropdown-min-width: 120px;
+
+
+/* Misc */
+$radius: 2px;
+$easing: east-out;
+$speed: 86ms;

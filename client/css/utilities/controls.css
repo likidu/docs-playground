@@ -1,0 +1,37 @@
+$control-height: 32px;
+$control-padding: 8px;
+
+@define-mixin control {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  background: $control-background;
+  border: 1px solid $control-border;
+  border-radius: $radius;
+  color: $control;
+  display: inline-flex;
+  font-size: $size-normal;
+  height: $control-height;
+  line-height: calc($control-height - $control-padding);
+  padding: calc($control-padding / 2) $control-padding;
+  position: relative;
+  vertical-align: top;
+
+  &:hover {
+    border-color: $control-hover-border;
+  }
+  &:active,
+  &:focus {
+    border-color: $control-active-border;
+    outline: none;
+  }
+  &[disabled],
+  &.is-disabled {
+    &,
+    &:hover {
+      background: $background;
+      border-color: $control-border;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<div className="box feedback-box" style={feedbackContainerStyle}>
+  <a nohref className="box-close" onClick={::this.onClose}></a>
+  <nav className="level">
+    <span className="level-item" style={{ marginRight: 12 }}>
+      <a nohref onClick={::this.handleShowFeedback}><i className="icon icon-tip"></i>Give feedback</a>
+    </span>
+  </nav>
+</div>
+
+
+<a nohref className="box-close" onClick={::this.onClose}></a>

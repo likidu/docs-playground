@@ -1,0 +1,71 @@
+/* Element */
+.feedback-thank {
+  display: block;
+  background: $background;
+  float: left;
+
+  & figure {
+    margin: 12px;
+  }
+}
+
+.feedback-backdrop {
+  background: #000;
+  opacity: 0.5;
+  position: fixed 0;
+}
+
+/* Container */
+.feedback-right {
+  position: relative;
+}
+
+$widget-mix-width: 50px;
+
+/* Wrapper */
+.feedback {
+  position: fixed auto 15px 20px auto;
+
+  & .level {
+    overflow: hidden;
+
+    &.expanded {
+      width: 150px !important;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  & .level-item {
+    min-width: $widget-mix-width;
+  }
+
+  & img {
+    max-width: 24px;
+  }
+
+  & .title {
+    margin-top: 0;
+  }
+}
+
+/* Alternative hacks */
+.feedback {
+  &.alter {
+    & .popover.is-top {
+      bottom: 0 !important;
+    }
+  }
+}
+
+.feedback-box {
+  overflow: hidden;
+
+  & h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+}

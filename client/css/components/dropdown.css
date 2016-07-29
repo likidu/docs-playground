@@ -1,0 +1,45 @@
+/* Elements */
+.dropdown-item {
+  @mixin clearfix;
+
+  display: block;
+  padding: 4px 8px;
+  /* For <button> */
+  text-align: inherit;
+  white-space: nowrap;
+  border: none;
+
+  & .icon {
+    margin-right: 6px;
+  }
+}
+
+/* Container */
+.dropdown-menu {
+  background: $dropdown-background;
+  border: 1px solid $border;
+  border-radius: $radius;
+  display: none;
+  float: left;
+  left: 0;
+  margin-top: 7px;
+  min-width: $dropdown-min-width;
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  z-index: 2;
+
+  &.is-pointer {
+    &:before {
+      @mixin arrow-up $border;
+      background: $dropdown-background;
+      left: 10px;
+      top: -5px;
+    }
+  }
+}
+
+/* Wrapper */
+.dropdown {
+  position: relative;
+}

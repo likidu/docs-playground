@@ -1,0 +1,102 @@
+$reference-toc-width: 226px;
+$reference-padding: 20px;
+
+/* Navbar */
+.reference-nav {
+	padding: 12px 20px;
+	border-bottom: 1px solid $border;
+}
+
+/* Article */
+.reference-content {
+  @mixin content;
+
+  /* ~16px */
+  font-size: 1.142857em;
+  padding-left: $reference-padding;
+  padding-right: $reference-padding;
+
+  & h6 {
+    /*margin-top: 20px;*/
+  }
+
+  & .alert {
+    background: $white;
+    border: 1px solid color($border lightness(+50%));
+    padding: 12px;
+
+    & li {
+      margin-top: 0;
+    }
+
+    & h5 {
+      color: $text-strong;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.65px;
+      margin: 0.35em 0;
+      text-transform: uppercase;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+/* Use position model to layout the toc sidebar and body area */
+.reference {
+  box-sizing: border-box;
+  position: relative;
+  overflow: auto;
+
+  & .reference-toc {
+    background: $background;
+    float: left;
+    height: 100vh;
+    width: $reference-toc-width;
+    overflow-y: auto;
+  }
+
+  & .reference-body-outer {
+    margin-left: calc($reference-toc-width + 1);
+    position: relative;
+  }
+
+  & .reference-body {
+    float: left;
+    width: 100%;
+    overflow-y: hidden;
+  }
+}
+
+/* ------ */
+/* TODO: Will deprecate when we start to touch the rendered content area */
+.reference-body {
+  & .header,
+  & .level {
+    @mixin grids;
+
+    & > .primary,
+    & > .secondary {
+      flex: 1;
+      padding: 10px;
+      max-width: 50%;
+      width: 50%;
+    }
+
+    & > .secondary {
+      padding-left: 24px;
+    }
+  }
+
+  & .header {
+    padding-left: 10px;
+    padding-right: @padding-left;
+  }
+
+  & .list-clean {
+    list-style: none;
+    margin: 0;
+  }
+}

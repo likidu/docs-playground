@@ -1,0 +1,33 @@
+/* Elements */
+.breadcrumb-item {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  padding: 0;
+  padding-right: 12px;
+
+  /* The separator between breadcrumbs, by default is right arrow */
+  &:not(:last-child) {
+    &:after {
+      @mixin back-slash $text;
+      margin-top: -6px;
+      right: 0;
+      top: 50%;
+    }
+  }
+
+  &.is-active,
+  &:last-child {
+    & > a {
+      color: $text;
+    }
+  }
+}
+
+/* Wrapper */
+.breadcrumb {
+  @mixin clearfix;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}

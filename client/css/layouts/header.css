@@ -1,0 +1,89 @@
+/* Elements */
+.header-item {
+  align-items: center;
+  display: flex;
+  flex: none;
+  padding: 10px;
+
+  & img {
+    /* Microsoft logo is @2x, so half of its height is the max height */
+    max-width: 50%;
+  }
+}
+
+/* Wrapper */
+/* TODO: Change to .header, now it conflicts with same class for content section */
+.header {
+  @mixin clearfix;
+  border-bottom: 1px solid color($border lightness(+8%));
+  background: $body-background;
+  display: flex;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+  /*z-index: 2;*/
+
+  & .container {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+  }
+
+  /* Responsive */
+  & {
+    @mixin mobile {
+      & .container {
+        flex-direction: column;
+      }
+    }
+    @mixin tablet {
+      height: $header-height;
+    }
+  }
+}
+
+.header + .header {
+  border-bottom-color: $border;
+  & {
+    @mixin tablet {
+      height: calc($header-height - 6px);
+    }
+  }
+}
+
+/* Containers */
+.header-left,
+.header-right {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  /* Responsive */
+  & {
+    @mixin mobile {
+      height: $header-height;
+    }
+    @mixin desktop {
+      & .header-item:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.header-right {
+  /* Responsive */
+  & {
+    @mixin tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+    @mixin desktop {
+      & .header-item:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

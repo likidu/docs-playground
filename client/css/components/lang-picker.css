@@ -1,0 +1,173 @@
+/* Language Picker */
+
+.lang-picker {
+    color: $text;
+    cursor: pointer;
+    line-height: $header-height;
+    padding-left: 10px;
+    padding-right: 32px;
+
+    &:after {
+        @mixin arrow-down $text;
+        margin-top: -6px;
+        right: 16px;
+        top: 50%;
+    }
+}
+/*
+.lang-picker > .arrow {
+    position: absolute;
+    width: 7px;
+    height: 13px;
+    top: 32%;
+    margin-left: 4px;
+    background: url(../images/dropdown.png) 50% 50% no-repeat;
+}*/
+
+.lang-list {
+    float: right;
+    clear: right;
+    top: 48px;
+    right: 0px;
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    background: #f1f1f1;
+    padding: 0px 0px 8px 0px;
+    text-align: left;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 220;
+}
+
+.lang-list .active, .lang-picker.active, .lang-picker:hover {
+    background-color: #f1f1f1;
+}
+
+.lang-list ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.lang-list a {
+    color: #2f2f2f;
+}
+
+.lang-list a.active {
+    color: #00a4f3;
+}
+
+.lang-list li:hover {
+    text-decoration: underline;
+}
+.lang-item {
+    width: 200px;
+    list-style: none;
+    margin: 0px;
+    border: 0px;
+    padding: 9px 20px;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/** default three-column language list is not visible, util the screen is large then 600px; */
+.three-column-container {
+    display: none;
+    clear: left;
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 33.333%;
+}
+.three-column-container > .three-column-inner {
+    float: left;
+    width: 100%;
+    position: relative;
+    right: 33.33%;
+
+}
+.three-column-container > .three-column-inner > .three-column-1 {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 68.67%;
+
+}
+.three-column-container > .three-column-inner > .three-column-2 {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 72.67%;
+    overflow: hidden;
+
+}
+.three-column-container > .three-column-inner > .three-column-3 {
+    float: left;
+    width: 29.33%;
+    position: relative;
+    left: 76.67%;
+    overflow: hidden;
+
+}
+/* show two column */
+
+.two-column-container {
+    display: block;
+    float: right;
+    width: 100%;
+    position: relative;
+}
+.two-column-container > .two-column-1 {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+.two-column-container > .two-column-2 {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (min-width: 420px) {
+    .lang-list {
+        width: 400px;
+    }
+
+    .two-column-container {
+        right: 50%;
+    }
+
+    .two-column-container > .two-column-1 {
+        float: left;
+        width: 46%;
+        left: 52%;
+    }
+    .two-column-container > .two-column-2 {
+        float: right;
+        width: 46%;
+        left: 56%;
+    }
+}
+
+@media screen and (min-width: 610px) {
+    .lang-list {
+        width: 600px;
+    }
+
+    /* show three column */
+    .two-column-container > * {
+        display: none;
+    }
+
+    .three-column-container {
+        display: block;
+    }
+}
+
+#header {
+    overflow: visible;
+}

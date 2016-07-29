@@ -1,0 +1,38 @@
+@define-mixin table {
+  color: $text-strong;
+  width: 100%;
+
+  & th,
+  & td {
+    border: 1px solid $border;
+    border-width: 0 0 1px;
+    padding: 8px 10px;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+
+  & th {
+    color: $text-strong;
+    text-align: left;
+  }
+
+  & thead {
+    & th,
+    & td {
+      border-width: 0 0 2px;
+      color: $text-light;
+    }
+  }
+  & tfoot {
+    & th,
+    & td {
+      border-width: 0 0 2px;
+      color: $text-light;
+    }
+  }
+}
+
+/* Wrapper */
+.table {
+  @mixin table;
+}

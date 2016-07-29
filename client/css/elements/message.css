@@ -1,0 +1,50 @@
+@define-mixin message-color $name, $color {
+  $text-color: color($color saturation(-15%) lightness(-15%));
+
+  &.is-$(name) {
+    background: color($color whiteness(+26%) lightness(+34%));
+    border-color: color($color saturation(-20%) alpha(30%));
+    color: $text-color;
+
+    & .message-header {
+      & h6 {
+        color: $text-color;
+      }
+    }
+
+    & .message-body {
+
+    }
+  }
+}
+
+.message-body {
+  & strong {
+    color: inherit;
+  }
+}
+
+.message-header {
+  font-size: 0.9em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  & h6 {
+    display: inline;
+  }
+}
+
+.message {
+  @mixin block;
+  background-color: $background;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 12px 15px;
+
+  /* Message colors */
+  @mixin message-color note, $note;
+  @mixin message-color important, $important;
+  @mixin message-color error, $error;
+}

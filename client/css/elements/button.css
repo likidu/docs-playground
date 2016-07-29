@@ -1,0 +1,82 @@
+/* Button colors */
+@define-mixin button-color $name, $color, $color-invert {
+  &.is-$(name) {
+    background: $color;
+    border-color: transparent;
+    color: $color-invert;
+
+    &:hover,
+    &:focus {
+     background: $color; /* TODO: darken 10% */
+     border-color: transparent;
+     color: $color-invert;
+    }
+    &:active {
+      border-color: transparent;
+    }
+  }
+}
+
+/* Button sizes */
+@define-mixin button-small {
+  border-radius: 2px;
+  font-size: $size-small;
+  height: 24px;
+  line-height: @height;
+  letter-spacing: 1px;
+  padding: 3px 6px;
+}
+
+
+.button {
+  @mixin control;
+  @mixin unselectable;
+  padding: 3px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover {
+    color: $control-hover;
+    transform: translateY(1px);
+  }
+
+  &.is-disabled,
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  & strong {
+    color: inherit;
+  }
+  & small {
+    display: block;
+    font-size: $size-small;
+    line-height: 1;
+    margin-top: 5px;
+  }
+
+  & .icon {
+    line-height: 24px !important;
+    margin: 0 -2px;
+    width: 24px;
+  }
+
+  /* Colored Buttons */
+  @mixin button-color primary, $primary, $white;
+  @mixin button-color info, $info, $white;
+
+  &.is-small {
+    @mixin button-small;
+  }
+  &.is-small-wide {
+    @mixin button-small;
+    padding-left: 10px;
+    padding-right: @padding-left;
+  }
+  &.is-fullwidth {
+    display: block;
+    width: 100%;
+  }
+}

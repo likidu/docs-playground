@@ -1,0 +1,55 @@
+/* Title: Simple headings to add depth to the page */
+/* TODO: subtitle*/
+@define-mixin title-size $i, $size {
+  &.is-$(i) {
+    font-size: $size;
+  }
+}
+
+.title {
+  @mixin block;
+  font-weight: $weight-title-normal;
+  word-break: break-word;
+
+  & em,
+  & span {
+    font-weight: $weight-title-normal;
+  }
+
+  & a {
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+
+  & strong {
+    font-weight: $weight-title-bold;
+  }
+}
+
+.title {
+  color: $text-light;
+  font-style: $size-large;
+  line-height: 1;
+
+  & strong {
+    color: $text-strong;
+  }
+
+  &.is-normal {
+    font-weight: 400;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+
+  /* Sizes */
+  @mixin title-size 1, $size-1;
+  @mixin title-size 2, $size-2;
+  @mixin title-size 3, $size-3;
+  @mixin title-size 4, $size-4;
+  @mixin title-size 5, $size-5;
+  @mixin title-size 6, $size-6;
+  @mixin title-size 7, $size-7;
+}

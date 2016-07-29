@@ -1,0 +1,172 @@
+@define-mixin form-color $name, $color {
+  &.is-$(name) {
+    border-color: $color;
+    color: $color;
+  }
+}
+
+@define-mixin form-control {
+  @mixin control;
+
+  /* Form colors */
+  /* TODO: Add more color variations */
+  @mixin form-color error, $error;
+}
+
+
+@define-mixin control-with-element {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 16px;
+  position: relative;
+  vertical-align: top;
+
+  & input {
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $control-hover;
+  }
+
+  &.is-disabled {
+    color: $text-light;
+    pointer-events: none;
+    & input {
+      pointer-events: none;
+    }
+  }
+}
+
+
+/* Definition of standard HTML form controls */
+.input {
+  @mixin form-control;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  &[type="search"] {
+    /* TODO: Set border-radius */
+  }
+
+  &.is-fullwidth: {
+    display: block;
+    width: 100%;
+  }
+  &.is-inline {
+    display: inline;
+    width: auto;
+  }
+}
+
+.textarea {
+  @mixin form-control;
+  display: block;
+  line-height: 1.2;
+  max-height: 500px;
+  min-height: 80px;
+  max-width: 100%;
+  padding: 10px;
+  resize: vertical;
+  width: 100%;
+  resize: vertical;
+}
+
+.checkbox {
+  @mixin control-with-element;
+
+  & > input[type="checkbox"] {
+    margin-right: 6px;
+  }
+}
+
+.radio {
+  @mixin control-with-element;
+  & + .radio {
+    margin-left: 10px;
+  }
+}
+
+.select {
+  display: inline-block;
+  height: $control-height;
+  position: relative;
+  vertical-align: top;
+  & select {
+    @mixin form-control;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    padding-right: 36px;
+    &:hover {
+      border-color: $control-hover-border;
+    }
+    &::ms-expand {
+      display: none;
+    }
+  }
+  &.is-fullwidth {
+    width: 100%;
+    & select {
+      width: 100%;
+    }
+  }
+  &:after {
+    @mixin arrow-down $control-border;
+    margin-top: -6px;
+    right: 16px;
+    top: 50%;
+  }
+  &:hover {
+    &:after {
+      border-color: $control-hover-border;
+    }
+  }
+}
+
+.label {
+  color: $text-strong;
+  display: block;
+
+  &.is-capitalized {
+    text-transform: uppercase;
+  }
+}
+
+/* Containers */
+
+.control-label {
+  & {
+    @mixin mobile {
+      margin-bottom: 5px;
+    }
+    @mixin tablet {
+      flex: 1;
+      margin-right: 20px;
+      padding-top: 7px;
+      text-align: right;
+    }
+  }
+}
+
+.control {
+  position: relative;
+  /* We want to restrict the font-size for the form controls */
+  font-size: 1rem;
+  text-align: left;
+
+  &.is-horizontal {
+    display: flex;
+    /* This will make multiple line control such as textarea align correctly */
+    align-items: baseline;
+
+    & > .control {
+      display: flex;
+      flex: 5;
+    }
+
+    &.on-right {
+      justify-content: flex-end;
+    }
+  }
+}

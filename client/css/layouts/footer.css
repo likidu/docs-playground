@@ -1,0 +1,66 @@
+/* Elements */
+.footer-item {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+
+  & img {
+    /* Microsoft logo is @2x, so half of its height is the max height */
+    max-width: 50%;
+  }
+}
+
+/* Wrapper */
+.footer {
+  @mixin clearfix;
+  background: $background-invert;
+  display: flex;
+  padding-top: 14px;
+  padding-bottom: @padding-top;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+  & .container {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+  }
+}
+
+/* Containers */
+.footer-left,
+.footer-right {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  /* Responsive */
+  & {
+    @mixin mobile {
+      height: $footer-height;
+    }
+    @mixin desktop {
+      & .footer-item:first-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.footer-right {
+  /* Responsive */
+  & {
+    @mixin tablet {
+      display: flex;
+      justify-content: flex-end;
+    }
+    @mixin desktop {
+      & .footer-item:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* All other useful elements */
+@define-mixin close $size: 12px {
+  @mixin unselectable;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 290486px; /* Set a ridiculous radius to prevent display quirks */
+  cursor: pointer;
+  height: calc($size * 2);
+  position: relative;
+  vertical-align: top;
+  width: @height;
+
+  &:before,
+  &:after {
+    background: $grey;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: calc(-$size / 2);
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 50%;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  /* Sizes */
+  &.is-small {
+    height: 16px;
+    width: @height;
+  }
+  &.is-medium {
+    height: 32px;
+    width: @height;
+  }
+  &.is-large {
+    height: 40px;
+    width: @height;
+  }
+}
+
+@define-mixin heading {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}

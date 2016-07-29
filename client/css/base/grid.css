@@ -1,0 +1,65 @@
+$gutter: 10px;
+
+@define-mixin grids {
+	margin-left: -$(gutter);
+	margin-right: @margin-left;
+	margin-top: @margin-left;
+	&:last-child {
+		margin-bottom: -$(gutter);
+	}
+	&:not(:last-child) {
+		margin-bottom: $gutter;
+	}
+	/*margin: 0;*/
+	/* Responsive */
+	& {
+		@mixin tablet {
+			&:not(.is-desktop) {
+				display: flex;
+			}
+		}
+		@mixin desktop {
+			display: flex;
+		}
+	}
+}
+
+.column {
+	flex: 1;
+	padding: 10px;
+	/* 12 grids */
+	@for $i from 1 to 11 {
+		&.is-$(i) {
+			flex: none;
+			width: calc($i / 12 * 100)%;
+		}
+		&.is-offset-$(i) {
+			margin-left: calc($i / 12 * 100)%;
+		}
+	}
+	/* TODO: Responsive variations */
+	& {
+		@mixin mobile {
+
+		}
+		/* Tablet is our default choice */
+		@mixin tablet {
+			@for $i from 1 to 11 {
+				$.is-$(i)-tablet {
+					flex: none;
+					width: calc($i / 12 * 100%);
+				}
+				$.is-offset-$(i)-tablet {
+					margin-left: calc($i / 12 * 100%);
+				}
+			}
+		}
+		@mixin desktop {
+
+		}
+	}
+}
+
+.columns {
+	@mixin grids;
+}

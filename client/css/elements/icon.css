@@ -1,0 +1,174 @@
+/* Original: font.css */
+@font-face {
+  font-family: 'FontAwesome';
+  /* Use RuckSack CSS font path shortcut */
+  font-path: '../fonts/fontawesome-icons';
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+    display: inline-block;
+    speak: none;
+
+    /* Better Font Rendering =========== */
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  /*font: normal normal 300 14px/1 FontAwesome !important;*/
+  font: normal normal 300 14px/1 FontAwesome;
+  font-size: inherit;
+  text-transform: none;
+}
+
+
+.icon-smile:before {
+    content: "\e900";
+}
+.icon-frown:before {
+    content: "\e901";
+}
+.icon-heart:before {
+    content: "\e006";
+}
+.icon-edit:before {
+    content: "\e104";
+}
+.icon-world:before {
+    content: "\e128";
+}
+.icon-conversation:before {
+    content: "\e134";
+}
+.icon-code:before {
+    content: "\e1b6";
+}
+.icon-uniE1FD:before {
+    content: "\e1fd";
+}
+.icon-assembly:before {
+    content: "\e2f7";
+}
+.icon-share:before {
+    content: "\e72d";
+}
+.icon-cloud:before {
+    content: "\e753";
+}
+.icon-tip:before {
+    content: "\e82f";
+}
+.icon-comments:before {
+    content: "\e8f2";
+}
+.icon-windows:before {
+    content: "\e8fd";
+}
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-inheritance:before {
+    content: "\f0e8";
+}
+.icon-skype:before {
+    content: "\f17e";
+}
+.icon-slack:before {
+    content: "\f198";
+}
+.icon-facebook:before {
+    content: "\f230";
+}
+
+/*.icon-heart:before {
+    content: "\e006";
+}
+.icon-arrow-left:before {
+    content: "\e00e";
+}
+.icon-arrow-right:before {
+    content: "\e00f";
+}
+.icon-arrow-up:before {
+    content: "\e010";
+}
+.icon-arrow-down:before {
+    content: "\e011";
+}
+.icon-arrow-left-1:before {
+    content: "\e0a6";
+}
+.icon-arrow-right-1:before {
+    content: "\e0ab";
+}
+.icon-edit:before {
+    content: "\e104";
+}
+.icon-arrow-up-1:before {
+    content: "\e110";
+}
+.icon-option:before {
+    content: "\e115";
+}
+.icon-help:before {
+    content: "\e11b";
+}
+.icon-world:before {
+    content: "\e128";
+}
+.icon-comments:before {
+    content: "\e134";
+}
+.icon-note:before {
+    content: "\e160";
+}
+.icon-code:before {
+    content: "\e1b6";
+}
+.icon-arrow-down-1:before {
+    content: "\e1fd";
+}
+.icon-assembly:before {
+    content: "\e2f7";
+}
+.icon-share:before {
+    content: "\e72d";
+}
+.icon-cloud:before {
+    content: "\e753";
+}
+.icon-info:before {
+    content: "\e783";
+}
+.icon-warning:before {
+    content: "\e7ba";
+}
+.icon-tip:before {
+    content: "\e82f";
+}
+.icon-conversation:before {
+    content: "\e8f2";
+}
+.icon-windows:before {
+    content: "\e8fd";
+}
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-inheritance:before {
+    content: "\f0e8";
+}
+.icon-skype:before {
+    content: "\f17e";
+}
+.icon-slack:before {
+    content: "\f198";
+}
+.icon-facebook:before {
+    content: "\f230";
+}
+*/
