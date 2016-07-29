@@ -15,9 +15,10 @@
 /* TODO: Change to .header, now it conflicts with same class for content section */
 .header {
   @mixin clearfix;
-  border-bottom: 1px solid color($border lightness(+8%));
-  background: $body-background;
-  display: flex;
+  /*border-bottom: 1px solid color($border lightness(+8%));*/
+  /*background: $body-background;*/
+  background: #1a1a1a;
+  /*display: flex;*/
   line-height: 24px;
   position: relative;
   text-align: center;
@@ -37,16 +38,7 @@
       }
     }
     @mixin tablet {
-      height: $header-height;
-    }
-  }
-}
-
-.header + .header {
-  border-bottom-color: $border;
-  & {
-    @mixin tablet {
-      height: calc($header-height - 6px);
+      /*height: $header-height;*/
     }
   }
 }

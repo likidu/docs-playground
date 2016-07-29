@@ -49,6 +49,7 @@ $widescreen: 1180px;
 /* Sizes */
 $header-height: 50px;
 $footer-height: 50px;
+$nav-height: 40px !default;
 
 $dropdown-background: $grey-lightest;
 $dropdown-min-width: 120px;

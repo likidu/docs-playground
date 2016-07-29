@@ -78,9 +78,15 @@ $conceptual-padding: 20px;
   }
 }
 
+.conceptual-item {
+  &:not(:last-child) {
+    margin-bottom: 4.8rem;
+  }
+}
+
 .conceptual-body {
   /* Hard coded article width to 700px */
-  overflow-y: scroll;
+  overflow-y: auto;
   flex: 1;
 
   & .social {

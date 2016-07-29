@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, DirectLink } from 'react-scroll';
 
 const DummySidebar = () => (
   <aside id="sidebar" className="sidebar conceptual-toc">
@@ -9,18 +10,19 @@ const DummySidebar = () => (
           <ul className="sidebar-nav-items is-level-1">
             <li>
               <a href="#" className="sidebar-nav-item">Set up environment and device</a>
+              <h6 className="sidebar-nav-ita">In this article</h6>
               <ul className="sidebar-nav-items is-level-2">
                 <li>
-                  <a href="#" className="sidebar-nav-item">Configure your device</a>
+                  <Link to="config-device" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Configure your device</Link>
                 </li>
                 <li>
-                  <a href="#" className="sidebar-nav-item">Get the tools</a>
+                  <DirectLink to="get-the-tools" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Get the tools</DirectLink>
                 </li>
                 <li>
-                  <a href="#" className="sidebar-nav-item">Deploy your first app</a>
+                  <DirectLink to="deploy-first-app" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Deploy your first app</DirectLink>
                 </li>
                 <li>
-                  <a href="#" className="sidebar-nav-item">Troubleshooting</a>
+                  <DirectLink to="troubleshooting" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Troubleshooting</DirectLink>
                 </li>
               </ul>
             </li>

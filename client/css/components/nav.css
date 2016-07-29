@@ -1,0 +1,66 @@
+/* Elements */
+.nav-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  & a {
+    flex-grow: 1;
+  }
+}
+
+a.nav-item {
+  /*color: $text;*/
+  color: $white;
+  &:hover {
+    color: $link-hover;
+  }
+  // Modifiers
+  &.is-active {
+    color: $link-active;
+  }
+  &.is-tab {
+    border-bottom: 2px solid transparent;
+    padding-left: 12px;
+    padding-right: 12px;
+    &:hover {
+      border-bottom: 2px solid $link-hover;
+    }
+    &.is-active {
+      border-bottom: 2px solid $link;
+      color: $link;
+    }
+  }
+}
+
+/* Containers */
+.nav-left {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Main */
+.nav {
+  align-items: stretch;
+  display: flex;
+  min-height: $nav-height;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+  & > .container {
+    align-items: stretch;
+    display: flex;
+    min-height: $nav-height;
+    width: 100%;
+  }
+  /* Modifiers */
+  &.has-shadow {
+    border-bottom: 1px solid $border;
+  }
+}

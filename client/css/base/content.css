@@ -30,9 +30,11 @@
     font-size: 1.5em;
   }
   & h4 {
+    font-weight: 500;
     font-size: 1.25em;
   }
   & h5 {
+    font-weight: 500;
     font-size: 1.125em;
   }
   & h6 {

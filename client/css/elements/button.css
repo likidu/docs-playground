@@ -25,6 +25,14 @@
   line-height: @height;
   letter-spacing: 1px;
   padding: 3px 6px;
+  text-transform: uppercase;
+}
+
+@define-mixin button-medium {
+  font-size: $size-medium;
+  height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 
@@ -33,7 +41,6 @@
   @mixin unselectable;
   padding: 3px 10px;
   text-align: center;
-  text-transform: uppercase;
   white-space: nowrap;
 
   &:hover {
@@ -74,6 +81,9 @@
     @mixin button-small;
     padding-left: 10px;
     padding-right: @padding-left;
+  }
+  &.is-medium {
+    @mixin button-medium;
   }
   &.is-fullwidth {
     display: block;
