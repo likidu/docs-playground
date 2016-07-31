@@ -1,19 +1,45 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Header from '../../components/Header';
-import MainSection from '../../components/MainSection';
-import Footer from '../../components/Footer';
 import * as FeedbackActions from '../../actions/feedback';
 
-const Conceptual = (props) => (
-  <div>
-    <Header />
-    <MainSection {...props} />
-    <Footer />
-  </div>
-);
+import Feedback1 from '../../components/Feedback1';
+import DummySidebar from './DummySidebar';
+import DummyContent from './DummyContent';
+
+const Conceptual = (props) => {
+  // let widget;
+  // switch (props.query.ver) {
+  //   case '1':
+  //     widget = <Feedback1 {...props} smileText="Yes" frownText="No" />;
+  //     break;
+  //   case '2':
+  //     widget = <Feedback2 {...props} />;
+  //     break;
+  //   case '3':
+  //     widget = <Feedback3 {...props} />;
+  //     break;
+  //   default:
+  //     widget = <Feedback1 {...props} smileText={props.feedback.smiles} frownText={props.feedback.frowns} />;
+  // }
+
+  const widget = <Feedback1 {...props} smileText={props.feedback.smiles} frownText={props.feedback.frowns} />;
+
+  return (
+    <div className="conceptual">
+      <DummySidebar />
+      <DummyContent />
+
+      {widget}
+    </div>
+  );
+};
+
+Conceptual.propTypes = {
+  feedback: PropTypes.object,
+  query: PropTypes.object,
+};
 
 function mapStateToProps(state, ownProps) {
   return {
