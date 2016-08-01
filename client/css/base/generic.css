@@ -112,8 +112,12 @@ input[type="radio"], {
 
       &.is-narrow {
         margin: 0 auto;
-        /*max-width: 960px;*/
         max-width: 740px;
+      }
+
+      &.is-wide {
+        margin: 0 auto;
+        max-width: 960px;
       }
     }
   }

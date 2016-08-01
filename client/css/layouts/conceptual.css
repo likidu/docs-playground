@@ -27,28 +27,6 @@ $conceptual-padding: 20px;
     }
   }
 
-  /* TODO: Await for template change. Needs deprecate it later */
-  /* Now the class name duplicates with the actual page toc */
-  & .intopic-toc {
-    border-top: 1px solid $border;
-    border-bottom: @border-top;
-    padding: 20px 10px;
-
-    & h6 {
-      margin-top: 0;
-    }
-
-    & ul {
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-
-      & li + li {
-        margin-top: 0.45em;
-      }
-    }
-  }
-
   & table {
     @mixin table;
   }

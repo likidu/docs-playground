@@ -1,0 +1,5 @@
+/* Container */
+
+.hub {
+  @mixin content;
+}

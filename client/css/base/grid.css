@@ -1,32 +1,7 @@
-$gutter: 10px;
-
-@define-mixin grids {
-	margin-left: -$(gutter);
-	margin-right: @margin-left;
-	margin-top: @margin-left;
-	&:last-child {
-		margin-bottom: -$(gutter);
-	}
-	&:not(:last-child) {
-		margin-bottom: $gutter;
-	}
-	/*margin: 0;*/
-	/* Responsive */
-	& {
-		@mixin tablet {
-			&:not(.is-desktop) {
-				display: flex;
-			}
-		}
-		@mixin desktop {
-			display: flex;
-		}
-	}
-}
-
 .column {
-	flex: 1;
+	flex: 1 1 auto;
 	padding: 10px;
+
 	/* 12 grids */
 	@for $i from 1 to 11 {
 		&.is-$(i) {
@@ -37,13 +12,19 @@ $gutter: 10px;
 			margin-left: calc($i / 12 * 100)%;
 		}
 	}
-	/* TODO: Responsive variations */
+
 	& {
 		@mixin mobile {
 
 		}
-		/* Tablet is our default choice */
+
 		@mixin tablet {
+			&.is-one-third,
+			&.is-one-third-tablet {
+				border: solid 1px red;
+				width: 33.3333%;
+			}
+
 			@for $i from 1 to 11 {
 				$.is-$(i)-tablet {
 					flex: none;
@@ -60,6 +41,28 @@ $gutter: 10px;
 	}
 }
 
+/* Container */
 .columns {
-	@mixin grids;
+	margin-top: -10px;
+	margin-right: -10px;
+	&:last-child {
+		margin-bottom: -10px;
+	}
+	&:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	&.is-multiline {
+		flex-wrap: wrap;
+	}
+	/* Responsive */
+	& {
+		@mixin tablet {
+			&:not(.is-desktop) {
+				display: flex;
+			}
+		}
+		@mixin desktop {
+			display: flex;
+		}
+	}
 }
