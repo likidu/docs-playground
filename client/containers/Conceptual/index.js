@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import * as FeedbackActions from '../../actions/feedback';
 
+import Breadcrumb from '../../components/Breadcrumb';
 import Feedback1 from '../../components/Feedback1';
 import DummySidebar from './DummySidebar';
 import DummyContent from './DummyContent';
@@ -27,11 +28,14 @@ const Conceptual = (props) => {
   const widget = <Feedback1 {...props} smileText={props.feedback.smiles} frownText={props.feedback.frowns} />;
 
   return (
-    <div className="conceptual">
-      <DummySidebar />
-      <DummyContent />
+    <div>
+      <Breadcrumb />
+      <div className="conceptual">
+        <DummySidebar />
+        <DummyContent />
 
-      {widget}
+        {widget}
+      </div>
     </div>
   );
 };

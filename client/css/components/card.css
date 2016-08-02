@@ -1,0 +1,32 @@
+/* Element */
+.card-header {
+  box-shadow: 0 1px 2px color($rich-black alpha(10%));
+  display: flex;
+  min-height: 40px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+/* Container */
+.card {
+  background-color: $white;
+  box-shadow: 0 2px 3px color($rich-black alpha(10%)), 0 0 0 1px color($rich-black alpha(10%));
+  color: $text;
+  display: block;
+  max-width: 100%;
+  position: relative;
+  width: 300px;
+
+  &.is-fixed-height {
+    height: 480px;
+    overflow: hidden;
+  }
+}

@@ -20,7 +20,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path="/" component={App}>
         <IndexRoute component={Hub} />
-        <Route path="get-started" component={Conceptual} />
+        <Route path="set-up-enivornment" component={Conceptual} />
       </Route>
     </Router>
   </Provider>,

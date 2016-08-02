@@ -1,0 +1,45 @@
+$azure-blue: #0078d7;
+
+.rpi {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg,
+.logo {
+  position: absolute !important;
+  user-select: none;
+}
+
+.bg {
+  max-width: 320px;
+  bottom: -40%;
+  right: 48px;
+}
+
+.logo {
+  right: 20px;
+  top: 20px;
+}
+
+.columns {
+  margin: 30px auto !important;
+}
+
+.card {
+  &:hover {
+    box-shadow: 0 2px 3px color($azure-blue alpha(50%)), 0 0 0 1px color($azure-blue alpha(50%));
+  }
+}
+
+.cardImage {
+  background: #f9f9f9;
+  padding: 30px;
+}
+
+.cardHeader {
+  align-items: center;
+  background: $azure-blue;
+  color: #fcfcfc !important;
+  padding: 5px 20px;
+}

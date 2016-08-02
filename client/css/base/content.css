@@ -7,7 +7,6 @@
   & h5,
   & h6 {
     color: $text;
-    font-weight: 300;
     line-height: 1.125;
     margin-bottom: 20px;
     word-wrap: break-word;
@@ -21,12 +20,15 @@
   }
   & h1 {
     font-size: 2em;
+    font-weight: 300;
     margin-top: 1.25em;
   }
   & h2 {
+    font-weight: 300;
     font-size: 1.75em;
   }
   & h3 {
+    font-weight: 400;
     font-size: 1.5em;
   }
   & h4 {

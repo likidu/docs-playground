@@ -48,6 +48,7 @@
     "webpack-hot-middleware": "^2.7.1"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "normalize.css": "^4.1.1",
     "react-overlays": "^0.6.3",
     "react-responsive": "^1.1.3",

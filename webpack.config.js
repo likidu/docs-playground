@@ -3,6 +3,8 @@ var rucksack = require('rucksack-css');
 var webpack = require('webpack');
 var path = require('path');
 
+var CSS_LIB = path.resolve(__dirname, 'client/css');
+
 module.exports = {
   context: path.join(__dirname, './client'),
   entry: {
@@ -46,22 +48,26 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'url?limit=10000&name=[sha512:hash:base64:5].[ext]',
       },
+      // All css files within the folder is acting as a lib
       {
         test: /\.css$/,
-        include: /client/,
+        include: CSS_LIB,
         loaders: [
           'style-loader',
-          // Temporary we don't use CSS modules for now.
-          // TODO: Should use best practice to have separate css attached to individual component.
-          // 'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', // eslint-disable-line
           'css-loader?sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', // eslint-disable-line
           'postcss-loader',
         ],
       },
+      // Use CSS modules on components
       {
         test: /\.css$/,
-        exclude: /client/,
-        loader: 'style!css',
+        include: /client/,
+        exclude: CSS_LIB,
+        loaders: [
+          'style-loader',
+          'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', // eslint-disable-line
+          'postcss-loader',
+        ],
       },
       {
         test: /\.(js|jsx)$/,

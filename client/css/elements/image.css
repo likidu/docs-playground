@@ -1,4 +1,4 @@
-$dimensions: 16, 24, 32, 48, 64, 96, 128;
+$dimensions: (16, 24, 32, 48, 64, 96, 128);
 
 .image {
   display: block;
@@ -15,7 +15,7 @@ $dimensions: 16, 24, 32, 48, 64, 96, 128;
   &.is-16by9,
   &.is-2by1 {
     & img {
-      @mixin overlay 0;
+      @mixin overlay;
       height: 100%;
       width: @height;
     }
@@ -37,7 +37,7 @@ $dimensions: 16, 24, 32, 48, 64, 96, 128;
     padding-top: 50%;
   }
 
-  @each $dimenstion in $dimensions {
+  @each $dimension in $dimensions {
     &.is-$(dimension)x$(dimension) {
       height: calc($dimension * 1px);
       width: @height;

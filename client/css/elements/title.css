@@ -6,7 +6,8 @@
   }
 }
 
-.title {
+.title,
+.subtitle {
   @mixin block;
   font-weight: $weight-title-normal;
   word-break: break-word;
@@ -33,15 +34,7 @@
   line-height: 1;
 
   & strong {
-    color: $text-strong;
-  }
-
-  &.is-normal {
-    font-weight: 400;
-
-    & strong {
-      font-weight: 700;
-    }
+    color: inherit;
   }
 
   /* Sizes */
@@ -52,4 +45,54 @@
   @mixin title-size 5, $size-5;
   @mixin title-size 6, $size-6;
   @mixin title-size 7, $size-7;
+
+  & + & .highlight {
+    margin-top: -10px;
+  }
+  & + & .subtitle {
+    margin-top: -10px;
+  }
+
+  &.is-normal {
+    font-weight: 400;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+
+  /* Responsiveness */
+  & {
+    @mixin tablet {
+      margin-top: -15px;
+    }
+  }
+}
+
+
+.subtitle {
+  color: $text;
+  font-size: $size-medium;
+  line-height: 1.125;
+  & code {
+    border-radius: $radius;
+    display: inline-block;
+    font-size: $size-normal;
+    padding: 2px 3px;
+    vertical-align: top;
+  }
+  & strong {
+    color: $text-strong;
+  }
+  & + & .title {
+    margin-top: -20px;
+  }
+
+  /* Modifers */
+  &.is-normal {
+    font-weight: 400;
+    & strong {
+      font-weight: 700;
+    }
+  }
 }

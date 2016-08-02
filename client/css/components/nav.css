@@ -1,3 +1,20 @@
+/* Nav colors */
+@define-mixin nav-color $name, $color, $color-invert {
+  &.is-$(name) {
+    background: $color;
+    color: $color-invert;
+
+    &:hover,
+    &:focus {
+     color: $color-invert;
+    }
+
+    &.has-shadow {
+      border-bottom-color: color($border alpha(40%));
+    }
+  }
+}
+
 /* Elements */
 .nav-item {
   align-items: center;
@@ -63,4 +80,7 @@ a.nav-item {
   &.has-shadow {
     border-bottom: 1px solid $border;
   }
+
+  /* Colors */
+  @mixin nav-color primary, $primary, $white;
 }

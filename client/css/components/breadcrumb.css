@@ -1,3 +1,20 @@
+/* Breadcrumb colors */
+@define-mixin breadcrumb-color $name, $color, $color-invert {
+  &.is-$(name) {
+    & .breadcrumb-item {
+      & > a {
+        color: $text-invert;
+      }
+      
+      &:not(:last-child) {
+        &:after {
+          @mixin back-slash $text-invert;
+        }
+      }
+    }
+  }
+}
+
 /* Elements */
 .breadcrumb-item {
   display: inline-block;
@@ -30,4 +47,7 @@
   list-style: none;
   padding: 0;
   margin: 4px 0;
+
+  /* Colors */
+  @mixin breadcrumb-color primary, $primary, $white;
 }

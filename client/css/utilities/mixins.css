@@ -104,7 +104,7 @@
   user-select: none;
 }
 
-@define-mixin overlay $offset {
+@define-mixin overlay $offset: 0 {
   bottom: $offset;
   left: $offset;
   position: absolute;

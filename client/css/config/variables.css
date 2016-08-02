@@ -1,13 +1,13 @@
 /* Color Table */
 /* From C+E brand guideline */
-$rich-black:    #000;
+$rich-black:    #000000;
 $grey-darker:   #222324;
 $grey-dark:     #69707a;
 $grey:          #aeb1b5;
 $grey-light:    #d3d6db;
 $grey-lighter:  #f5f7fa;
 $grey-lightest: #fafcfe;
-$white:         #fff;
+$white:         #ffffff;
 
 $blue:          #00a4f3;
 $azure-blue:    #0078d7;

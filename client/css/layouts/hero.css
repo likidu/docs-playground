@@ -1,0 +1,72 @@
+/* Hero Colors */
+@define-mixin hero-color $name, $color, $color-invert {
+  &.is-$(name) {
+    background-color: $color;
+    color: $color-invert;
+
+    & .title {
+      color: $color-invert;
+      a, strong { color: inherit; }
+    }
+    & .subtitle {
+      color: color($color-invert alpha(85%));
+      a, strong { color: $color-invert; }
+    }
+  }
+}
+
+.hero-head,
+.hero-foot {
+  flex-shrink: 0;
+}
+
+.hero-body {
+  flex-grow: 1;
+  padding: 40px 20px;
+
+  /* Sizes */
+  &.is-half {
+    flex: none;
+    width: 50%;
+  }
+  
+  /* Responsiveness */
+  & {
+    @mixin desktop {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/* Container */
+.hero {
+  align-items: stretch;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & .nav {
+    background: none;
+    box-shadow: 0 1px 0 color($border alpha(30%));
+  }
+  & .tabs {
+    ul { border-bottom: none; }
+  }
+
+  /* Color variations */
+  @mixin hero-color primary, $primary, $white;
+
+  /* Sizes */
+  &.is-medium {
+    /* Responsiveness */
+    & {
+      @mixin tablet {
+        & .hero-body {
+          padding-bottom: 120px;
+          padding-top: 120px;
+        }
+      }
+    }
+  }
+}

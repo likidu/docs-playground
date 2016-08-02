@@ -27,7 +27,7 @@ const DummySidebar = () => (
               </ul>
             </li>
             <li>
-              <a href="#" className="sidebar-nav-item">Connect your device to Azuure IoT</a>
+              <a href="#" className="sidebar-nav-item">Connect your device to Azure IoT</a>
             </li>
             <li>
               <a href="#" className="sidebar-nav-item">Build real-time analytics</a>
