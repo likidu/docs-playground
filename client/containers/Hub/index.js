@@ -24,6 +24,24 @@ const Hub = () => (
       <div className="container is-wide">
         <section className={`columns is-multiline ${style.columns}`}>
           <div className="column is-one-third">
+            <a href="#" className={`card is-fixed-height ${style.card}`}>
+              <div className={`card-image ${style.cardImage}`}>
+                <figure className="image is-128x128">
+                  <img src={require('../../images/cloud-computing.png')} alt="" />
+                </figure>
+              </div>
+              <div className={`card-header ${style.cardHeader}`}>
+                <span>Accelerate your IoT development</span>
+              </div>
+              <div className="card-content">
+                <div className="content">
+                  <h3>Fuel your IoT development with Visual Studio Code</h3>
+                  <p>Coding, debugging and testing, all in one place. Download Visual Studio Code today.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div className="column is-one-third">
             <Link to="/set-up-enivornment" className={`card is-fixed-height ${style.card}`}>
               <div className={`card-image ${style.cardImage}`}>
                 <figure className="image is-128x128">
