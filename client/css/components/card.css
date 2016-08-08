@@ -1,4 +1,17 @@
 /* Element */
+.card-order {
+  @mixin circle 48px, 4px, $background;
+  align-items: center;
+  color: $background;
+  display: flex;
+  font-size: $size-1;
+  font-weight: 700;
+  justify-content: center;
+  position: absolute;
+  right: -20px;
+  bottom: @right;
+}
+
 .card-header {
   box-shadow: 0 1px 2px color($rich-black alpha(10%));
   display: flex;

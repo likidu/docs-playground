@@ -1,4 +1,5 @@
 $azure-blue: #0078d7;
+$vs-purple: #5c2d91;
 
 .rpi {
   position: relative;
@@ -29,6 +30,16 @@ $azure-blue: #0078d7;
 .card {
   &:hover {
     box-shadow: 0 2px 3px color($azure-blue alpha(50%)), 0 0 0 1px color($azure-blue alpha(50%));
+  }
+
+  &.isVscode {
+    &:hover {
+      box-shadow: 0 2px 3px color($vs-purple alpha(50%)), 0 0 0 1px color($vs-purple alpha(50%));
+    }
+
+    & > .cardHeader {
+      background: $vs-purple;
+    }
   }
 }
 
