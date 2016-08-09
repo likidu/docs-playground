@@ -7,7 +7,7 @@
 .sidebar-nav-item {
   color: $text;
   display: block;
-  padding: 6px 0;
+  padding: 8px 0;
 
   &.is-selected {
     color: $link;
@@ -16,8 +16,9 @@
 
 .sidebar-nav-ita {
   color: $text-light;
+  font-size: $size-small;
   margin: 0;
-  padding: 2px auto 6px 0;
+  padding: 2px 0 6px 0;
   text-transform: uppercase;
 }
 
@@ -47,6 +48,13 @@
         border-left: calc(3px - $i + 1) solid $border;
         margin: 6px 3px 6px;
         padding-left: calc(15px - $i * 2);
+        /* No padding for first and last node */
+        &:first-child {
+          padding-top: 0;
+        }
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
     }
   }

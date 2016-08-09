@@ -2,7 +2,7 @@
   $text-color: color($color saturation(-15%) lightness(-15%));
 
   &.is-$(name) {
-    background: color($color whiteness(+26%) lightness(+34%));
+    background: $color whiteness(+26%) lightness(+34%));
     border-color: color($color saturation(-20%) alpha(30%));
     color: $text-color;
 
