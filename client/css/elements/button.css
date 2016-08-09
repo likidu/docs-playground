@@ -21,7 +21,7 @@
 @define-mixin button-small {
   border-radius: 2px;
   font-size: $size-small;
-  height: 24px;
+  height: 32px;
   line-height: @height;
   letter-spacing: 1px;
   padding: 3px 6px;
@@ -30,9 +30,8 @@
 
 @define-mixin button-medium {
   font-size: $size-medium;
-  height: 40px;
-  padding-left: 14px;
-  padding-right: 14px;
+  height: 48px;
+  padding: 10px 14px;
 }
 
 

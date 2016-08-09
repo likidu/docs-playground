@@ -1,8 +1,8 @@
 /* Element */
 .card-order {
-  @mixin circle 48px, 4px, $background;
+  @mixin circle 48px, 4px, color($border alpha(40%));
   align-items: center;
-  color: $background;
+  color: color($border alpha(40%));
   display: flex;
   font-size: $size-1;
   font-weight: 700;

@@ -6,14 +6,17 @@ const DummySidebar = () => (
     <nav className="sidebar-nav">
       <ul className="sidebar-nav-items is-level-0">
         <li>
-          <a href="#" className="sidebar-nav-item">Get Started</a>
+          <a href="#" className="sidebar-nav-item">Introduction</a>
+        </li>
+        <li>
+          <a href="#" className="sidebar-nav-item">Quickstart</a>
           <ul className="sidebar-nav-items is-level-1">
             <li>
               <a href="#" className="sidebar-nav-item">Set up environment and device</a>
               <h6 className="sidebar-nav-ita">In this article</h6>
               <ul className="sidebar-nav-items is-level-2">
                 <li>
-                  <Link to="config-device" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Configure your device</Link>
+                  <Link to="config-device" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item is-selected">Configure your device</Link>
                 </li>
                 <li>
                   <DirectLink to="get-the-tools" spy smooth duration={500} activeClass="is-selected" className="sidebar-nav-item">Get the tools</DirectLink>
