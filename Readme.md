@@ -22,7 +22,7 @@ A boilerplate of things that mostly shouldn't exist.
 - [x] Issue: Seems all classes defined is not loaded, shall we separate the file?
 - [x] Add A/B Testing mechanism
 - [ ] Production Webpack configurations:
-  - [ ] Extract css modules into `.css` file
+- [ ] Extract css modules into `.css` file
 
 ## Contains
 
