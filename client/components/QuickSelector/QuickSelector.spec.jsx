@@ -7,8 +7,6 @@ import QuickSelector from './QuickSelector';
 describe('Spec of <QuickSelector />', () => {
   it('should have a default value');
 
-  it('should expand all options on hovering');
-
   it('should display selected value');
 
   it('should render children', () => {
@@ -19,5 +17,21 @@ describe('Spec of <QuickSelector />', () => {
   });
 
   it('should dectect current OS type');
+
+  describe('hover state', () => {
+    it('should expand the options on hovering', () => {
+      const wrapper = shallow(
+        <QuickSelector value={1}>
+          <div value={1} text="Windows" />
+          <div value={2} text="OSX / macOS" />
+          <div value={3} text="Linux" />
+        </QuickSelector>
+      );
+
+      wrapper.simulate('mouseEnter');
+      assert.strictEqual(wrapper.state().hovered, true, 'should respond to mouseEnter event');
+      
+    })
+  });
 });
 
