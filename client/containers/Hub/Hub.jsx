@@ -14,6 +14,8 @@ class Hub extends Component {
   }
 
   render() {
+    const { courses } = this.props;
+
     return (
       <div>
         <Breadcrumb isPrimary />
@@ -33,7 +35,34 @@ class Hub extends Component {
             </figure>
           </section>
           <div className="container is-wide">
+            <h3>{courses.length} Courses</h3>
             <section className={`columns is-multiline ${style.columns}`}>
+              {courses.map((course, idx) => {
+                return (
+                <div key={idx} className="column is-one-third">
+                  <Link to="/set-up-enivornment" className={`card is-fixed-height ${style.card}`}>
+                    <div className={`card-image ${style.cardImage}`}>
+                      <figure className="image is-128x128">
+                        <img src={require('../../images/light-bulb.png')} alt="" />
+                      </figure>
+                    </div>
+                    <div className={`card-header ${style.cardHeader}`}>
+                      <span>{course.time} mins</span>
+                    </div>
+                    <div className="card-content">
+                      <div className="content">
+                        <h3>{course.title}</h3>
+                        <p>{course.brief}</p>
+                      </div>
+                    </div>
+                    <figure className="card-order">
+                      <span>1</span>
+                    </figure>
+                  </Link>
+                </div>
+                );
+              })}
+              
               <div className="column is-one-third">
                 <a href="https://code.visualstudio.com/download" className={`card is-fixed-height ${style.card} ${style.isVscode}`} target="_blank">
                   <div className={`card-image ${style.cardImage}`}>
@@ -175,7 +204,7 @@ Hub.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    courses: state.courses,
+    courses: state.hub.courses,
   };
 }
 

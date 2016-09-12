@@ -1,10 +1,9 @@
 {
-  "num": 9,
   "courses": [
     {
       "locked": false,
       "level": "Beginner",
-      "length": 20,
+      "time": 20,
       "title": "Get started with your Raspberry Pi device",
       "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
       "lessons": 4,
@@ -13,7 +12,7 @@
     {
       "locked": false,
       "level": "Beginner",
-      "length": 20,
+      "time": 20,
       "title": "Get started with your Raspberry Pi device",
       "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
       "lessons": 4,
@@ -22,7 +21,7 @@
     {
       "locked": false,
       "level": "Beginner",
-      "length": 20,
+      "time": 20,
       "title": "Get started with your Raspberry Pi device",
       "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
       "lessons": 4,
@@ -31,7 +30,7 @@
     {
       "locked": false,
       "level": "Beginner",
-      "length": 20,
+      "time": 20,
       "title": "Get started with your Raspberry Pi device",
       "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
       "lessons": 4,
@@ -40,7 +39,7 @@
     {
       "locked": false,
       "level": "Beginner",
-      "length": 20,
+      "time": 20,
       "title": "Get started with your Raspberry Pi device",
       "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
       "lessons": 4,

@@ -46,14 +46,15 @@
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-overlays": "^0.6.6",
-    "react-responsive": "^1.1.4",
-    "react-scroll": "^1.4.0",
     "react-redux": "^4.4.5",
+    "react-responsive": "^1.1.4",
     "react-router": "^2.8.0",
     "react-router-redux": "^4.0.5",
+    "react-scroll": "^1.4.0",
     "react-sticky": "^5.0.5",
     "redux": "^3.6.0",
     "redux-actions": "^0.12.0",
+    "redux-promise": "^0.5.3",
     "velocity-react": "^1.1.5",
     "whatwg-fetch": "^1.0.0"
   }
