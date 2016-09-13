@@ -25,8 +25,8 @@
       "level": "Beginner",
       "time": 20,
       "icon": "../../images/stats.png",
-      "title": "Get started with your Raspberry Pi device",
-      "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
+      "title": "Build Real-time Analytics",
+      "brief": "With the basics mastered, you’ll learn how to perform real-time processing of device data.  You’ll create a Stream Analytics job to categorize and filter sensor data based on device location and time.",
       "lessons": 4,
       "currentLesson": 0
     },
@@ -35,8 +35,8 @@
       "level": "Beginner",
       "time": 20,
       "icon": "../../images/thermometer.png",
-      "title": "Get started with your Raspberry Pi device",
-      "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
+      "title": "Find temperature anomalies",
+      "brief": "With the device data processed, you’ll learn how to use machine learning to find temperature anomalies and perform advanced analysis of device data over time.",
       "lessons": 4,
       "currentLesson": 0
     },
@@ -45,8 +45,8 @@
       "level": "Beginner",
       "time": 20,
       "icon": "../../images/folder.png",
-      "title": "Get started with your Raspberry Pi device",
-      "brief": "Configure your Raspberry Pi 3 device with an operating system, set up your development environment, and deploy a simple application to the Pi.",
+      "title": "Configure the frequency and type of data collected",
+      "brief": "Control what data your device sends to the cloud and how frequently it communicates, configure cloud to device requests for specific data based on triggers.",
       "lessons": 4,
       "currentLesson": 0
     }
