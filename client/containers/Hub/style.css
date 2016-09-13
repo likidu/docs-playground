@@ -27,30 +27,46 @@ $vs-purple: #5c2d91;
   margin: 30px auto !important;
 }
 
+.courseListTitle {
+  text-align: center;
+}
+
 .card {
   &:hover {
-    box-shadow: 0 2px 3px color($azure-blue alpha(50%)), 0 0 0 1px color($azure-blue alpha(50%));
-  }
-
-  &.isVscode {
-    &:hover {
-      box-shadow: 0 2px 3px color($vs-purple alpha(50%)), 0 0 0 1px color($vs-purple alpha(50%));
-    }
-
-    & > .cardHeader {
-      background: $vs-purple;
-    }
+    box-shadow: 0 1px 2px color($azure-blue alpha(10%)), 0 0 0 1px color($azure-blue alpha(10%));
   }
 }
 
 .cardImage {
-  background: #f9f9f9;
-  padding: 30px;
+  padding: 20px;
 }
 
 .cardHeader {
   align-items: center;
-  background: $azure-blue;
-  color: #fcfcfc !important;
-  padding: 5px 20px;
+  background: #fff;
+  padding: 20px;
+}
+
+.startButton {
+  min-height: 40px;
+  background: $azure-blue !important;
+  line-height: 32px !important;
+  font-weight: 600;
+}
+
+.lessonProgress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 20px;
+
+  & > span {
+    padding-left: 10px;
+    padding-right: @padding-left;
+  }
+}
+
+.lessonProgressText {
+  white-space: nowrap;
 }
