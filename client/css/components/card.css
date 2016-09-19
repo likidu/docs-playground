@@ -12,10 +12,23 @@
   bottom: @right;
 }
 
-.card-header {
-  box-shadow: 0 1px 2px color($rich-black alpha(10%));
+.card-caption {
   display: flex;
-  min-height: 40px;
+  justify-content: space-between;
+  font-size: 0.8rem;
+
+  & .title {
+    color: $azure-blue;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+}
+
+.card-header {
+  text-align: center;
+  min-height: 180px;
 }
 
 .card-image {
@@ -28,10 +41,14 @@
   padding: 20px;
 }
 
+.card-footer {
+  
+}
+
 /* Container */
 .card {
-  background-color: $white;
-  box-shadow: 0 2px 3px color($rich-black alpha(10%)), 0 0 0 1px color($rich-black alpha(10%));
+  background-color: $grey-lighter;
+  box-shadow: 0 1px 2px color($rich-black alpha(3%)), 0 0 0 1px color($rich-black alpha(3%));
   color: $text;
   display: block;
   max-width: 100%;
@@ -39,7 +56,10 @@
   width: 300px;
 
   &.is-fixed-height {
-    height: 480px;
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    justify-content: space-between;
     overflow: hidden;
   }
 }

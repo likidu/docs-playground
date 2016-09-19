@@ -70,6 +70,7 @@
   }
 
   /* Colored Buttons */
+  /* e.g: is-primary */
   @mixin button-color primary, $primary, $white;
   @mixin button-color info, $info, $white;
 
@@ -85,6 +86,7 @@
     @mixin button-medium;
   }
   &.is-fullwidth {
+    border-radius: 0;
     display: block;
     width: 100%;
   }
