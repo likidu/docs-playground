@@ -62,7 +62,10 @@ class Hub extends Component {
                     </div>
                     <div className="card-footer">
                       <div className={style.lessonProgress}>
-                        { course.locked && <span>L</span> }
+                        <span>
+                          { course.locked && <img src="../../images/icon-lock.png" /> }
+                          { !course.locked && <img src="../../images/icon-unlock.png" /> }
+                        </span>
                         <progress className="progress is-info" value={course.currentLesson} max={course.lessons}>%</progress>
                         <span className={style.lessonProgressText}><strong>{course.currentLesson}</strong> of <strong>{course.lessons}</strong> lessons</span>
                       </div>
