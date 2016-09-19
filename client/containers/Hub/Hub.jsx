@@ -23,7 +23,7 @@ class Hub extends Component {
           <section className={`hero is-primary ${style.rpi}`}>
             <div className="hero-body is-half">
               <div className="container">
-                <h1 className="title">Get started with Raspberry Pi 2/3</h1>
+                <h1 className="title">Azure IoT Starter Kit Courses</h1>
                 <h4 className="subtitle">Start your learning journey through Raspberry Pi Starter Kit with this sequenced collection of courses, and understand the extensive and powerful capabilities of Azure Services.</h4>
               </div>
             </div>
@@ -36,9 +36,6 @@ class Hub extends Component {
           </section>
           <article className="container is-wide">
             <section className={style.courseListTitle}>
-              <h1>Azure IoT Starter Kit Courses</h1>
-              <span className="subtitle">for</span>
-              <hr />
               <h3>{courses.length} Courses</h3>
             </section>
             <section className={`columns is-multiline ${style.columns}`}>
@@ -53,7 +50,7 @@ class Hub extends Component {
                       </div>
                       <div className={`card-image ${style.cardImage}`}>
                         <figure className="image is-64x64">
-                          <img src={require('../../images/light-bulb.png')} alt="" />
+                          <img src={`../../images/${course.icon}`} alt="" />
                         </figure>
                       </div>
                       <div className="title is-5">{course.title}</div>
@@ -65,7 +62,7 @@ class Hub extends Component {
                     </div>
                     <div className="card-footer">
                       <div className={style.lessonProgress}>
-                        <span>L</span>
+                        { course.locked && <span>L</span> }
                         <progress className="progress is-info" value={course.currentLesson} max={course.lessons}>%</progress>
                         <span className={style.lessonProgressText}><strong>{course.currentLesson}</strong> of <strong>{course.lessons}</strong> lessons</span>
                       </div>

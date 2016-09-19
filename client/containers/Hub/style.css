@@ -28,6 +28,7 @@ $vs-purple: #5c2d91;
 }
 
 .courseListTitle {
+  margin-top: 40px;
   text-align: center;
 }
 

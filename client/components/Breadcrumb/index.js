@@ -9,10 +9,10 @@ const Breadcrumb = (props) => {
       <div className="container">
         <ol className={`nav-item breadcrumb ${color}`}>
           <li className="breadcrumb-item">
-            <a href="#">Documentation</a>
+            <a href="#">Azure IoT</a>
           </li>
           <li className="breadcrumb-item">
-            <a href="#">IoT</a>
+            <a href="#">Starter Kits</a>
           </li>
           <li className="breadcrumb-item">
             <a href="#" className="is-active">Raspberry Pi 2/3</a>
